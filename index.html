@@ -1,0 +1,124 @@
+<!doctype html>
+<!-- index.html - Página principal con 3 botones -->
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mi Regalo para mi ZOMBIE</title>
+  <style>
+    /* Estilo romántico suave */
+    :root{
+      --bg: linear-gradient(135deg, #fff4f7 0%, #ffeef0 50%, #fff9f2 100%);
+      --card: rgba(255,255,255,0.8);
+      --accent: #f28ab2;
+      --text: #4b2e3a;
+      --shadow: 0 8px 24px rgba(75,46,58,0.12);
+    }
+    body{
+      margin:0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color:var(--text);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:2rem;
+    }
+    .container{
+      width:100%;
+      max-width:920px;
+      text-align:center;
+      background:var(--card);
+      border-radius:20px;
+      padding:40px;
+      box-shadow:var(--shadow);
+      backdrop-filter: blur(4px);
+    }
+    h1{
+      margin:0 0 12px 0;
+      font-size:2rem;
+      letter-spacing:0.6px;
+    }
+    p.lead{
+      margin:0 0 28px 0;
+      color:#6b4956;
+      opacity:0.9;
+    }
+
+    /* Botones elegantes */
+    .buttons{
+      display:flex;
+      gap:18px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .btn{
+      background: linear-gradient(180deg, #fff 0%, #ffeef6 100%);
+      border:2px solid rgba(242,138,178,0.18);
+      color:var(--text);
+      padding:14px 22px;
+      border-radius:14px;
+      font-weight:600;
+      text-decoration:none;
+      box-shadow: 0 6px 18px rgba(242,138,178,0.12);
+      transform: translateY(0);
+      transition: transform .18s ease, box-shadow .18s ease;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+    }
+    .btn:hover{ transform: translateY(-6px); box-shadow: 0 20px 30px rgba(75,46,58,0.08); }
+    .btn .dot{
+      width:12px;height:12px;border-radius:50%;
+      background:var(--accent);
+      box-shadow: 0 2px 6px rgba(242,138,178,0.28);
+    }
+
+    /* Pequeña animación de corazón */
+    .heart {
+      display:inline-block;
+      margin-left:6px;
+      transform-origin:center;
+      animation: pulse 1.8s infinite;
+      font-size:1.1rem;
+      color:#e65f89;
+    }
+    @keyframes pulse {
+      0%{ transform: scale(1); opacity:0.95; }
+      50%{ transform: scale(1.08); opacity:1; }
+      100%{ transform: scale(1); opacity:0.95; }
+    }
+
+    footer{ margin-top:26px; color:#7a515f; font-size:0.9rem; opacity:0.9; }
+  </style>
+</head>
+<body>
+  <div class="container" role="main" aria-labelledby="mainTitle">
+    <h1 id="mainTitle">Bienvenida a un lugar igual de raro que su creador <span class="heart">♥</span></h1>
+    <p class="lead">Haz clic los botones en orden, no te saltes ninguno. esto es algo especial para ti</p>
+
+    <div class="buttons" role="navigation" aria-label="Navegación principal">
+      <!-- Cada botón abre un archivo HTML diferente -->
+      <a class="btn" href="pagina1.html">
+        <span class="dot" aria-hidden="true"></span>
+        Paso 1
+      </a>
+
+      <a class="btn" href="pagina2.html">
+        <span class="dot" aria-hidden="true"></span>
+        Paso 2
+      </a>
+
+      <a class="btn" href="pagina3.html">
+        <span class="dot" aria-hidden="true"></span>
+        Paso 3 y ultimo
+      </a>
+    </div>
+
+    <footer>
+      Todo esto es por una razon, porque te quiero mucho 
+    </footer>
+  </div>
+</body>
+</html>
